@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Accounting.DataLayer.Repositories
 {
-    interface ICustomerRepository
+    public interface ICustomerRepository
+
     {
-    }
+        List<Customers> GetAllCustomers();
+        Customers GetCustomerbyID(int customerId);
+        bool InsertCustomer(Customers customer);
+        bool UpdateCustomer(Customers customer);
+        bool DeleteCustomer(Customers customer);
+        bool DeleteCustomer(int customerId);
+        void Save();
+   }
 }
